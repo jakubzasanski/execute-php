@@ -3,6 +3,8 @@ execute-php
 
 Execute PHP function within NodeJS application
 
+Fork of `exec-php` with support ES6 modules.
+
 Install
 -------
 

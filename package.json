@@ -1,31 +1,32 @@
 {
-  "name": "exec-php",
-  "version": "0.0.5",
+  "name": "execute-php",
+  "version": "0.0.6",
   "description": "Execute PHP function within NodeJS application",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha"
-  },
+  "main": "./index.mjs",
+  "exports": "./index.mjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/iqbalfn/exec-php.git"
+    "url": "https://github.com/jakubzasanski/execute-php"
   },
   "keywords": [
     "nodejs",
     "javascript",
-    "php"
+    "php",
+    "node",
+    "exec",
+    "execute",
+    "run"
   ],
-  "author": "Iqbal Fauzi",
+  "author": "Jakub Zasański",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/iqbalfn/exec-php/issues"
+    "url": "https://github.com/jakubzasanski/execute-php/issues"
   },
-  "homepage": "https://github.com/iqbalfn/exec-php",
+  "homepage": "https://github.com/jakubzasanski/execute-php#readme",
   "dependencies": {
-    "mocha": "^5.2.0",
-    "tmp": "0.0.33"
+    "tmp": "0.2.1"
   },
   "devDependencies": {
-    "should": "^4.0.4"
+    "should": "^13.2.3"
   }
 }

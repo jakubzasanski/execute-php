@@ -3,7 +3,9 @@ execute-php
 
 Execute PHP function within NodeJS application
 
-Fork of `exec-php` with support ES6 modules.
+Fork of [exec-php](https://github.com/iqbalfn/exec-php) with support ES6 modules and node 16+.
+
+`After exec-php bring support nodeJS 16+ this package will be depracted.`
 
 Install
 -------
@@ -33,13 +35,13 @@ execute-php arguments
 The `Function` arguments called with this arguments:
 
 1. `Mixed`. Error message.
-2. `Object`. Exec-php object that contain all user php defined function.
+2. `Object`. Execute-php object that contain all user php defined function.
 3. `String`. Printed string when requiring user php file.
 
 execute-php object
 ---------------
 
-All user function defined on user php file will be appended to exec-php object.
+All user function defined on user php file will be appended to execute-php object.
 Call it normally with the last argument is callback function. The callback 
 function called with below arguments :
 
@@ -52,7 +54,7 @@ function called with below arguments :
 Note
 ----
 
-All uppercase function name on PHP will be converted to lowercase on `exec-php`.
+All uppercase function name on PHP will be converted to lowercase on `execute-php`.
 
     // file.php
     <?php
@@ -60,19 +62,10 @@ All uppercase function name on PHP will be converted to lowercase on `exec-php`.
         function MyFunction($a, $b){ return $a + $b; }
     
     // app.js 
-    var execPhp = require('exec-php');
-    
+    import executePhp from "execute-php";
+
     executePhp('file.php', function(error, php, outprint){
         php.myfunction(1, 2, function(error, result){
             // result is now 3
         });
     });
-
-ChangeLog
----------
-
-1. 0.0.6 - initial version - fork of exec-php (https://github.com/iqbalfn/exec-php)
-   - Provide necessary changes to run with ES6 syntax
-   - update README & LICENSE
-   - update dependencies & package.josn
-   - delete test directory

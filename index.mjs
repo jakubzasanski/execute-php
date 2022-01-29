@@ -1,7 +1,7 @@
 /**
  * Execute PHP function within NodeJS application
  * @package execute-php
- * @version 0.0.6
+ * @version 0.0.10
  */
 
 import fs from "fs";
@@ -9,7 +9,7 @@ import path from "path";
 import execute from "./lib/cli.mjs";
 
 /**
- * Create exec-php object that contain user php functions.
+ * Create execute-php object that contain user php functions.
  * @param {string} file, Path to user php file.
  * @param {string} bin, Path to php bin file.
  * @param {function} callback, Callback function.
@@ -33,7 +33,6 @@ export default function executePhp(file, bin, callback){
 
     if(!fs.existsSync(file)){
         throw new Error('File `' + file + '` not found.');
-
     }
 
     let cache = {};
@@ -42,8 +41,7 @@ export default function executePhp(file, bin, callback){
             return callback(error);
         }
 
-        for(var i=0; i < result.length; i++){
-            let func = result[i];
+        for (let func of result){
             cache[func] = (function(file, bin, func){
                 return function(){
                     let args = Array.prototype.slice.call(arguments, 0);

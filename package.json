@@ -1,12 +1,12 @@
 {
   "name": "execute-php",
-  "version": "0.0.6",
+  "version": "1.0.0",
   "description": "Execute PHP function within NodeJS application",
   "main": "./index.mjs",
   "exports": "./index.mjs",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jakubzasanski/execute-php"
+    "url": "git+https://github.com/jakubzasanski/execute-php.git"
   },
   "keywords": [
     "nodejs",
@@ -14,8 +14,10 @@
     "php",
     "node",
     "exec",
+    "exec-php-es6",
     "execute",
-    "run"
+    "run",
+    "es6"
   ],
   "author": "Jakub Zasański",
   "license": "MIT",
@@ -28,5 +30,11 @@
   },
   "devDependencies": {
     "should": "^13.2.3"
+  },
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   }
 }

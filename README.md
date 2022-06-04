@@ -7,6 +7,11 @@ Fork of [exec-php](https://github.com/iqbalfn/exec-php) with support ES6 modules
 
 `After exec-php bring support nodeJS 16+ this package will be depracted.`
 
+![version](https://img.shields.io/github/v/tag/jakubzasanski/execute-php?label=version)
+![license](https://img.shields.io/github/license/jakubzasanski/execute-php)
+
+---
+
 Install
 -------
 
@@ -69,3 +74,10 @@ All uppercase function name on PHP will be converted to lowercase on `execute-ph
             // result is now 3
         });
     });
+    
+    
+---
+
+Like my work? Buy me a beer! 🍺
+
+[![Donate](https://img.shields.io/badge/Donate-PayPal-blue.svg)](https://www.paypal.com/donate/?hosted_button_id=KWNT5X4DUL2AY)
